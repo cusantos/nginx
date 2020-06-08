@@ -6,3 +6,4 @@
 | 3 | Regex Case Sensitive Match    | __~__ uri   | location ~ /greet/[a-zA-Z]   |
 | 4 | Regex Case In-Sensitive Match | __~*__ uri  | location ~* /greet/[a-zA-Z]  |
 | 5 | Prefix Match                  | uri         | location /greet              |
+
