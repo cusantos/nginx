@@ -2,7 +2,7 @@
 >  It uses username and password for authentication.
 
 #### Start the container
-> Make sure the you're under __ __
+> Make sure the you're under __/4. Basic Auth__
 ```
 $ docker-compose up -d
   Creating network "4basicauth_app_network" with the default driver
