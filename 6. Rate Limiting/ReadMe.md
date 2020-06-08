@@ -43,8 +43,20 @@
     FOR A PARTICULAR PURPOSE.
 
 
-``` 
- - Rate Limit Test Execution:
+```
+
+#### Start NGINX Docker container
+> Make sure that you're under __/6. Rate Limiting__
+```
+$ docker-compose up -d 
+  Creating sdc-nginx ... 
+
+$ docker ps
+ CONTAINER ID        IMAGE                   COMMAND                  CREATED             STATUS              PORTS                NAMES
+ 3b31d1fd441b        butch/sdc-nginx:1.0.0   "nginx -g 'daemon of…"   20 seconds ago      Up 17 seconds       0.0.0.0:80->80/tcp   sdc-nginx
+```
+ 
+#### Rate Limit Test Execution:
 ``` 
     $ siege -v -r 1 -c 5 http://localhost # 
     ** SIEGE 4.0.4
@@ -57,15 +69,24 @@
     HTTP/1.1 503     0.00 secs:     197 bytes ==> GET  /
     
     Transactions:		           1 hits
-    Availability:		       20.00 %
-    Elapsed time:		        0.01 secs
-    Data transferred:	        0.00 MB
-    Response time:		        0.00 secs
-    Transaction rate:	      100.00 trans/sec
-    Throughput:		        0.13 MB/sec
-    Concurrency:		        0.00
-    Successful transactions:           1
+    Availability:		           20.00 %
+    Elapsed time:		           0.01 secs
+    Data transferred:	                   0.00 MB
+    Response time:		           0.00 secs
+    Transaction rate:	                   100.00 trans/sec
+    Throughput:		                   0.13 MB/sec
+    Concurrency:		           0.00
+    Successful transactions:               1
     Failed transactions:	           4
-    Longest transaction:	        0.00
-    Shortest transaction:	        0.00
+    Longest transaction:	           0.00
+    Shortest transaction:	           0.00
+```
+
+#### To stop & remove the container
+> Make sure that you're under __/6. Rate Limiting__
+```
+$ docker-compose down
+  Stopping sdc-nginx ... done 
+  Removing sdc-nginx ... done
+  Removing network 6ratelimiting_app_network
 ```
