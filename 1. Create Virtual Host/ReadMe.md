@@ -9,8 +9,10 @@
       nginx version: nginx/1.18.0
 
 #### Test NGINX
- - Click this [link](http://localhost:80) to open and test it via browser.
-   ![Result](./images/result.png) 
+ > Click this [link](http://localhost:80) to open and test it via browser.
+
+
+![Result](./images/result.png) 
 
 #### To stop & remove the container
     # Make sure that you're under /nginx-demo/1. Create Virtual Host
