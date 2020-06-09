@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Redis | SDC Technical Documentation</title>
+    <meta name="description" content="">
+    <meta name="generator" content="VuePress 1.4.0">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.9ec8c9eb.css" as="style"><link rel="preload" href="/assets/js/app.00bbf126.js" as="script"><link rel="preload" href="/assets/js/2.89bf191e.js" as="script"><link rel="preload" href="/assets/js/8.310e9524.js" as="script"><link rel="prefetch" href="/assets/js/10.004ed5d0.js"><link rel="prefetch" href="/assets/js/11.29c9b703.js"><link rel="prefetch" href="/assets/js/12.f0943d94.js"><link rel="prefetch" href="/assets/js/13.0db55a90.js"><link rel="prefetch" href="/assets/js/14.51a5a903.js"><link rel="prefetch" href="/assets/js/15.8c6249ea.js"><link rel="prefetch" href="/assets/js/3.f6ae5d81.js"><link rel="prefetch" href="/assets/js/4.70522dbb.js"><link rel="prefetch" href="/assets/js/5.64a8b544.js"><link rel="prefetch" href="/assets/js/6.4939ca54.js"><link rel="prefetch" href="/assets/js/7.1291408e.js"><link rel="prefetch" href="/assets/js/9.7cd805e6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.9ec8c9eb.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">SDC Technical Documentation</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/database/" class="nav-link">
+  Databases
+</a></div><div class="nav-item"><a href="/web-server/" class="nav-link">
+  Web Servers
+</a></div><div class="nav-item"><a href="/in-memory-database/" class="nav-link router-link-active">
+  In Memory Database
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/database/" class="nav-link">
+  Databases
+</a></div><div class="nav-item"><a href="/web-server/" class="nav-link">
+  Web Servers
+</a></div><div class="nav-item"><a href="/in-memory-database/" class="nav-link router-link-active">
+  In Memory Database
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>In Memory Database</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/in-memory-database/" class="sidebar-link">Introduction</a></li><li><a href="/in-memory-database/Redis/" class="active sidebar-link">Redis</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/in-memory-database/Redis/#introduction" class="sidebar-link">Introduction</a></li><li class="sidebar-sub-header"><a href="/in-memory-database/Redis/#features" class="sidebar-link">Features</a></li><li class="sidebar-sub-header"><a href="/in-memory-database/Redis/#limitations" class="sidebar-link">Limitations</a></li><li class="sidebar-sub-header"><a href="/in-memory-database/Redis/#clustering" class="sidebar-link">Clustering</a></li><li class="sidebar-sub-header"><a href="/in-memory-database/Redis/#basic-set-up" class="sidebar-link">Basic Set-up</a></li><li class="sidebar-sub-header"><a href="/in-memory-database/Redis/#use-cases" class="sidebar-link">Use Cases</a></li><li class="sidebar-sub-header"><a href="/in-memory-database/Redis/#references" class="sidebar-link">References</a></li></ul></li><li><a href="/in-memory-database/Memcached/" class="sidebar-link">Memcached</a></li><li><a href="/in-memory-database/RedisVsMemcached/" class="sidebar-link">Redis vs Memcached</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="redis"><a href="#redis" class="header-anchor">#</a> Redis</h1> <p><img src="/assets/img/redis_logo.5c758128.png" alt="Alt Text"></p> <h2 id="introduction"><a href="#introduction" class="header-anchor">#</a> Introduction</h2> <p>The name Redis stands for REmote DIctionary Server since it refers to the data structure server.  Redis basically is known as a data structure server. An in-memory data structure store supporting many data types like strings, hashes, sets, sorted sets, etc. Essentially, it is a key-value store.</p> <h2 id="features"><a href="#features" class="header-anchor">#</a> Features</h2> <ul><li>Support data structure such as:
+<ul><li>strings</li> <li>hashes</li> <li>lists</li> <li>sets</li> <li>sorted sets with range queries</li> <li>bitmaps</li> <li>hyperloglogs</li> <li>geospatial indexes with radius queries and streams.</li></ul></li> <li>Built-in replication, Lua scripting, LRU eviction, transactions and different levels of on-disk persistence</li> <li>Automatic Partitioning(Redis Cluster)</li> <li>Atomic operations</li> <li>Master-slave asynchronous replication</li> <li>Transactions</li> <li>Pub/Sub</li> <li>Lua scripting</li> <li>Keys with a limited time-to-live</li> <li>LRU eviction of keys</li> <li>Automatic failover</li></ul> <h2 id="limitations"><a href="#limitations" class="header-anchor">#</a> Limitations</h2> <ul><li>No official support for Windows build</li> <li>May work with solaris-deprived systems like Smart OS, but the support is best effort</li> <li>Requires Client Support</li> <li>Limited Multi-Key Operation Support</li></ul> <h2 id="clustering"><a href="#clustering" class="header-anchor">#</a> Clustering</h2> <p>WIP</p> <h2 id="basic-set-up"><a href="#basic-set-up" class="header-anchor">#</a> Basic Set-up</h2> <ul><li>Stand Alone
+<ul><li>https://redis.io/topics/quickstart</li></ul></li> <li>Try Redis online
+<ul><li>http://try.redis.io/</li></ul></li> <li>Clustering setup</li></ul> <h2 id="use-cases"><a href="#use-cases" class="header-anchor">#</a> Use Cases</h2> <ul><li>If you need persistence, simple replication and want to use list/set/hash data structures in the database, then Redis is a good choice.</li></ul> <h2 id="references"><a href="#references" class="header-anchor">#</a> References</h2> <ul><li><a href="https://pepipost.com/blog/redis-vs-memcached-review-features-and-comparison/" target="_blank" rel="noopener noreferrer">Redis vs Memcached- Review, Features and Comparison<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://redis.io/topics/introduction" target="_blank" rel="noopener noreferrer">Redis Introduction<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated:</span> <span class="time">5/24/2020, 11:50:48 PM</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/in-memory-database/" class="prev router-link-active">
+        Introduction
+      </a></span> <span class="next"><a href="/in-memory-database/Memcached/">
+        Memcached
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.00bbf126.js" defer></script><script src="/assets/js/2.89bf191e.js" defer></script><script src="/assets/js/8.310e9524.js" defer></script>
+  </body>
+</html>
