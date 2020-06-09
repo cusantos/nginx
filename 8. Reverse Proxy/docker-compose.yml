@@ -15,8 +15,6 @@ services:
     build:
       context: ./apps/nodejs
     container_name: sdc-node-app1
-    ports:
-      - 3000
     networks:
       - app_network
     environment:
