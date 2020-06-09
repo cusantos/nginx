@@ -1,0 +1,35 @@
+version: '3.3'
+
+services:
+  sdc-nginx:
+    image: butch/sdc-nginx:1.0.0
+    container_name: sdc-nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 80:80
+    networks:
+      - app_network
+
+  sdc-node-app1:
+    build:
+      context: ./apps/nodejs
+    container_name: sdc-node-app1
+    ports:
+      - 3000
+    networks:
+      - app_network
+    environment:
+      - AppName=sdc-node-app1
+
+  sdc-node-app2:
+    build:
+      context: ./apps/nodejs
+    container_name: sdc-node-app2
+    networks:
+      - app_network
+    environment:
+      - AppName=sdc-node-app2
+
+networks:
+  app_network:

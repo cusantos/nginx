@@ -1,0 +1,15 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "NodeJS Express Example Demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "cusantos@globe.com.ph",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "os": "^0.1.1"
+  }
+}
