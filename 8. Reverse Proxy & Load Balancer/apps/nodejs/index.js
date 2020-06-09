@@ -9,6 +9,8 @@ app.get('/', (req, res) => {
         date: new Date(),
         hostName: os.hostname() || "Can't get actual hostname",
         appName:  process.env.AppName || "ExpressJs Example App",
+        httpMethod: req.method || "Can't get HTTP Verb",
+        endpoint: req.path || "Can't get request path.",
         queryParams: [req.query || "No Query params"]
     });
 });

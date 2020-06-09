@@ -29,5 +29,14 @@ services:
     environment:
       - AppName=sdc-node-app2
 
+  sdc-node-app3:
+    build:
+      context: ./apps/nodejs
+    container_name: sdc-node-app3
+    networks:
+      - app_network
+    environment:
+      - AppName=sdc-node-app3
+
 networks:
   app_network:
