@@ -1,7 +1,12 @@
 const express = require('express');
 const os = require('os');
+const morgan = require('morgan');
+
 const app = express();
+
 const port = 80;
+
+app.use(morgan('combined'))
 
 app.get('/*', (req, res) => {
     res.type('application/json');
