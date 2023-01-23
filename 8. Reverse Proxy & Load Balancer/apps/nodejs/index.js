@@ -3,7 +3,7 @@ const os = require('os');
 const app = express();
 const port = 80;
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
     res.type('application/json');
     res.jsonp({
         date: new Date(),
